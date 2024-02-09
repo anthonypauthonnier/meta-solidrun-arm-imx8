@@ -11,17 +11,16 @@ diff --git a/arch/arm64/boot/dts/freescale/imx8mn-compact.dts b/arch/arm64/boot/
 index 50dcf4f64cc4..7f315e5d3b93 100755
 --- a/arch/arm64/boot/dts/freescale/imx8mn-compact.dts
 +++ b/arch/arm64/boot/dts/freescale/imx8mn-compact.dts
-@@ -609,8 +609,7 @@
- 	status = "okay";
+@@ -625,7 +625,7 @@
+         status = "okay";
  };
- 
--
+
 -&usdhc1 {
 +&usdhc1 { /* WIFI */
          #address-cells = <1>;
          #size-cells = <0>;
          pinctrl-names = "default", "state_100mhz", "state_200mhz";
-@@ -622,9 +621,9 @@
+@@ -637,9 +637,9 @@
          keep-power-in-suspend;
          non-removable;
          cap-power-off-card;
@@ -30,7 +29,7 @@ index 50dcf4f64cc4..7f315e5d3b93 100755
          mmc-pwrseq = <&usdhc1_pwrseq>;
 -        status = "desabled";
 +        status = "okay";
- 
+
          brcmf: bcrmf@1 {
                  reg = <1>;
 -- 
